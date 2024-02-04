@@ -120,10 +120,10 @@
             // 
             this.box_lekarz.FormattingEnabled = true;
             this.box_lekarz.Items.AddRange(new object[] {
-            "Dr. Michał Wiśniewski",
-            "Dr. Dominik Lak",
-            "Dr. Magdalena Opos",
-            "Dr. Halina Piorun"});
+            "Internicta - Dr. Michał Wiśniewski",
+            "Pediatra - Dr. Dominik Lak",
+            "Okulista - Dr. Magdalena Opos",
+            "Ortopeda - Dr. Halina Piorun"});
             this.box_lekarz.Location = new System.Drawing.Point(537, 47);
             this.box_lekarz.Name = "box_lekarz";
             this.box_lekarz.Size = new System.Drawing.Size(200, 21);

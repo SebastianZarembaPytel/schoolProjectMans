@@ -270,6 +270,7 @@
             // text_pesel
             // 
             this.text_pesel.Location = new System.Drawing.Point(242, 166);
+            this.text_pesel.MaxLength = 11;
             this.text_pesel.Name = "text_pesel";
             this.text_pesel.Size = new System.Drawing.Size(151, 20);
             this.text_pesel.TabIndex = 23;

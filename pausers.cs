@@ -31,7 +31,7 @@ namespace WindowsFormsApp2
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM systemlogin", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT username, usertype, name, surname FROM systemlogin", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;

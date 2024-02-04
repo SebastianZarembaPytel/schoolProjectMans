@@ -37,7 +37,7 @@ namespace WindowsFormsApp2
                 conn.Open();
 
                 // Wprowadź dane użytkownika do bazy danych
-                string updateQuery = "UPDATE pacjentdata SET name = @name, surname = @surname, sex = @sex, DateOfBirth = @DateOfBirth, telefon = @telefon, email = @email, miasto = @miasto, ulica = @ulica, kodpoczt = @kodpoczt WHERE pesel = '" + text_pesel.Text + "'";
+                string updateQuery = "UPDATE pacjentdata SET name = @name, surname = @surname, sex = @sex, pesel = @pesel, DateOfBirth = @DateOfBirth, telefon = @telefon, email = @email, miasto = @miasto, ulica = @ulica, kodpoczt = @kodpoczt WHERE pesel = '" + text_loadpacjent.Text + "'";
                 SqlCommand cmd = new SqlCommand(updateQuery, conn);
                 cmd.Parameters.AddWithValue("@name", text_imie.Text);
                 cmd.Parameters.AddWithValue("@surname", text_nazwisko.Text);
@@ -118,6 +118,10 @@ namespace WindowsFormsApp2
                     text_data.Value = Convert.ToDateTime(reader["DateOfBirth"]);
 
                     text_loadpacjent.Text = reader["pesel"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Nie udało się załadować danych Pacjenta z bazy danych.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

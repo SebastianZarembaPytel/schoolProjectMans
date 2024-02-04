@@ -51,7 +51,7 @@ namespace WindowsFormsApp2
                // string insertQuery = "INSERT INTO pacjentdata (name, surname, sex, DateOfBirth, pesel, telefon, email, miasto, ulica, kodpoczt) VALUES (@name, @surname, @sex, @DateOfBirth, @pesel)";
 
 
-                string insertQuery = "INSERT INTO pacjentdata (name, surname, sex, DateOfBirth, pesel) VALUES (@name, @surname, @sex, @DateOfBirth, @pesel)";
+                string insertQuery = "INSERT INTO pacjentdata (name, surname, sex, DateOfBirth, pesel, telefon, email, miasto, ulica, kodpoczt) VALUES (@name, @surname, @sex, @DateOfBirth, @pesel, @telefon, @email, @miasto, @ulica, @kodpoczt)";
                 
                 
                 
@@ -59,7 +59,11 @@ namespace WindowsFormsApp2
                 cmd.Parameters.AddWithValue("@name", text_imie.Text);
                 cmd.Parameters.AddWithValue("@surname", text_nazwisko.Text);
                 cmd.Parameters.AddWithValue("@sex", box_plec.Text);
-
+                cmd.Parameters.AddWithValue("@telefon", text_numer.Text);
+                cmd.Parameters.AddWithValue("@email", text_email.Text);
+                cmd.Parameters.AddWithValue("@miasto", text_miasto.Text);
+                cmd.Parameters.AddWithValue("@ulica", text_ulica.Text);
+                cmd.Parameters.AddWithValue("@kodpoczt", text_kodpoczt.Text);
 
 
                 // Odczyt daty urodzenia z DateTimePicker

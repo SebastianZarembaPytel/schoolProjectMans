@@ -136,6 +136,7 @@
             this.text_pass.Name = "text_pass";
             this.text_pass.Size = new System.Drawing.Size(161, 26);
             this.text_pass.TabIndex = 8;
+            this.text_pass.UseSystemPasswordChar = true;
             // 
             // text_name
             // 
